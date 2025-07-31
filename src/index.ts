@@ -22,16 +22,14 @@ const DynamicAppIcon = NativeModules.DynamicAppIcon
       }
     );
 
-const { ON_ACTIVITY_PAUSED, ON_ACTIVITY_STOPPED, ON_ACTIVITY_DESTROYED } =
-  DynamicAppIcon.getConstants();
-
 const WhenToKillOldClasses = {
-  ON_ACTIVITY_PAUSED,
-  ON_ACTIVITY_STOPPED,
-  ON_ACTIVITY_DESTROYED,
+  ON_ACTIVITY_PAUSED: "ON_ACTIVITY_PAUSED",
+  ON_ACTIVITY_STOPPED: "ON_ACTIVITY_STOPPED",
+  ON_ACTIVITY_DESTROYED: "ON_ACTIVITY_DESTROYED",
 };
 
 export { WhenToKillOldClasses };
+
 export async function changeIcon(
   iconName: string,
   extraParams?: ChangeIconExtraParams
